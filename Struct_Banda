@@ -1,0 +1,55 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, HTML, CSS, JS
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+#define TAM 3
+
+typedef struct BANDA {
+    char nome[20];
+    char estilo[15];
+    int integrantes;
+    int ranking;
+} BANDA;
+
+void leBanda(BANDA *v) {
+    
+    for(int i = 0; i < TAM; i++) {
+        printf("\nNome da banda: ");
+        scanf("%s", v[i].nome);
+    
+        printf("\nEstilo musical: ");
+        scanf("%s", v[i].estilo);
+    
+        printf("\nQt de integrantes: ");
+        scanf("%d", &v[i].integrantes);
+    
+        printf("\nRanking: ");
+        scanf("%d", &v[i].ranking);
+    }
+    
+}
+
+void exibeBanda(BANDA *exib) {
+    for(int i = 0; i < TAM; i++) {
+        printf("\n\nBanda: %s", exib[i].nome);
+        printf("\nEstilo: %s", exib[i].estilo);
+        printf("\nIntegrantes: %d", exib[i].integrantes);
+        printf("\nRanking: %d", exib[i].ranking);
+    }
+    
+} 
+
+int main() {
+    BANDA v[TAM];
+    leBanda(v);
+    printf("\n\nLISTAGEM DE TODAS AS BANDAS");
+    exibeBanda(v);
+    
+    return 0;
+}
+
