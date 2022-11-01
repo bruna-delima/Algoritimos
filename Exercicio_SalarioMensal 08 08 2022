@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    
+    float SH, SM, H;
+    
+    printf("Insira o salário hora\n");
+    scanf("%f", &SH);
+    
+    printf("Insira as horas de trabalho\n");
+    scanf("%f", &H);
+    
+    SM = SH * H;
+
+    printf("\nSalário mensal = %f\n", SM);
+    return 0;
+}
