@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <locale.h>
+int main () {
+		
+		setlocale(LC_ALL, "Portuguese");
+		int i;
+		float preco1=1.30, preco2=1.00, precofinal;
+        
+		printf("Entre com a quantidade de maçãs desejadas:\n\n");
+        scanf("%d", &i);
+        
+        printf("Quantidade de maçãs: %d", i);
+        
+        if (i>=12)(precofinal = preco2 * i);
+        if (i<12)(precofinal = preco1 * i);
+        printf("\nO preço das maçãs é: %f", precofinal);
+        return 0;
+    }
