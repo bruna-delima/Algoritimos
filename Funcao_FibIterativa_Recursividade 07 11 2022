@@ -1,0 +1,40 @@
+/******************************************************************************
+
+Bruna de Lima Gregorio - 07/11/2022 
+Exercicio FibIterativa Recursiva
+
+*******************************************************************************/
+#include <stdio.h>
+
+int fib (int n) {
+    printf("\nDentro da função fib n=%d", n);
+    if (n == 0)  return 0;
+    if (n == 1)  return 1;
+    if (n > 1)   return (fib(n-1) + fib(n-2));
+}
+int fibIterativa (int n) {
+    int termo1 = 0, termo2 = 1, retorno;
+    if (n==0) retorno = 0;
+    if (n==1) retorno = 1;
+    while (n>1) {
+         retorno = termo1 + termo2;
+         termo1 = termo2;
+         termo2 = retorno;
+         
+         n--;
+    }
+    return retorno;
+}
+
+int main(){
+    int aux, n;
+    
+    printf("Digite o valor de n: ");
+    scanf ("%d", &n);
+    
+    aux = fib(n);
+    
+    printf ("\n\nO valor retornado é %d", aux);
+
+    return 0;
+}
